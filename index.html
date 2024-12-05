@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 02 Osa</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <h1>Hei JavaScript</h1>
+    <p>Kirjoitan sinulla nyt toista kertaa.</p>
+    <p>
+      Tehtävänä on koodata JavaScriptillä keskusteluikkuna, johon lisätään
+      sisältö "Hyvää huomenta!" (alert)
+    </p>
+    <p>Toisena tehtävänä kirjoita selaimen konsoliin jotakin. (console.log)</p>
+    <!-- JavaScript lisätään bodyn loppuun, jotta se suoritaaan vasta kun koko DOM-rakenne on valmis-->
+    <script>
+      console.log("--01 Muuttujat--");
+      // 01 Muuttujat
+      // muuttujat_01
+      let count = 0;
+      console.log("Muuttuja count on aluksi " + count, count);
+      count = count + 1;
+      console.log("Muuttuja count on nyt " + count);
+      count++;
+      console.log("Muuttuja count on nyt " + count);
+
+      // muuttujat_02
+
+      // const määrittelee vakiomuuttujan (arvoa ei voi muuttaa)
+      let ageLimit = 18; // Используем let, чтобы переменную можно было изменить.
+      console.log("Muuttuja ageLimit on let-määritelty " + ageLimit);
+      //ageLimit++;
+
+      // Määrittele kaksi muuttujaa: student ja name.
+      // Anna muuttujalle name arvoksi "Mikko".
+      // Kopioi arvo muuttujasta name muuttujaan student.
+      // Tulosta student-muuttujan arvo konsoliin (tulostus on "Mikko").
+      let student = null;
+      console.log("Student on " + student);
+      let name = "Mikko";
+      console.log("Student: " + student, "Name: " + name);
+      student = name;
+      console.log("Student: " + student, "Name: " + name);
+
+      // 02 Tietotyypit
+      console.log("--02 Tietotyypit--");
+
+      // data_types
+      let age2 = 44;
+      let name2 = "Maria";
+      let isStudent2 = true;
+      let hobbies2 = ["lukeminen", "juokseminen", "koodaaminen"];
+      let info2 = {
+        schoolName: "Business College Helsinki",
+        grade: 5,
+      };
+      // Tulostetaan kaikki muuttujat konsoliin
+      console.log(
+        "Muuttujan age2 arvo " + age2 + " ja tietotyyppi on " + typeof age2
+      );
+      console.log(
+        "Muuttujan name2 arvo " + name2 + " ja tietotyyppi on " + typeof name2
+      );
+      console.log(
+        "Muuttujan isStudent2 arvo" +
+          isStudent2 +
+          "ja tietotyyppi on " +
+          typeof isStudent2
+      );
+      console.log(
+        "Muuttujan hobbies2 arvo" +
+          hobbies2 +
+          "ja tietotyyppi on " +
+          typeof hobbies2
+      );
+      console.log(
+        "Muuttujan info2 arvo" + info2 + "ja tietotyyppi on " + typeof info2
+      );
+      console.log(
+        "Olioon info2 on tallennettu arvot" +
+          info2.schoolName +
+          "ja" +
+          info2.grade +
+          " ja olion tietotyyppi " +
+          typeof info2
+      );
+
+      // 03 Numerot
+      console.log("--03 Numerot--");
+      let vastaus = 42;
+      let merkkijonoVastaus = vastaus.toString();
+      console.log(
+        "Muuttujan vastaus arvo " +
+          vastaus +
+          " ja tietotyyppi " +
+          typeof vastaus
+      );
+      console.log(
+        "Muuttujan merkkijonoVastaus arvo " +
+          merkkijonoVastaus +
+          " ja tietotyyppi " +
+          typeof merkkijonoVastaus
+      );
+
+      // isNaN (is not a Numner)
+      let luku = 123;
+      let merkkijono = "abc";
+      let merkkijonoLuku = luku.toString();
+      console.log("Muuttuja luku ei ole numero (onko totta) " + isNaN(luku));
+      console.log(
+        "Muuttuja merkkijono ei ole numero (onko totta) " + isNaN(merkkijono)
+      );
+      console.log(
+        "Muuttuja merkkijonoLuku ei ole numero (onko totta) " +
+          isNaN(merkkijonoLuku)
+      );
+
+      // merkkijono luvuksi (Number.parseInt)
+      let str = "42";
+      let strNumero = Number.parseInt(str);
+      console.log(
+        "arvo " +
+          str +
+          ", tyyppi " +
+          typeof str +
+          ", arvo " +
+          strNumero +
+          ", tyyppi " +
+          typeof strNumero
+      );
+      //console.log("Muuttuja str ei ole numero (onko totta) " + isNaN(Number(str)));
+      //console.log("Muuttuja strNumero ei ole numero (onko totta) " + isNaN(strNumero));
+
+      // Muutetaan merkkijono numeroksi ja lasketaan sillä
+      let x = 10;
+      let y = "20 metriä";
+
+      console.log(x, y);
+      y = Number.parseInt(y);
+      let summa = x + y;
+      console.log("summa = x + y" + "==>" + x + "+" + y + "=" + summa);
+
+      //Sesimaalien määrä
+      let luku3 = 2.1254567;
+      let luku3KaksiDesimaalia = luku3.toFixed(2);
+      console.log(luku3, luku3KaksiDesimaalia);
+      luku3KaksiDesimaalia = parseFloat(luku3KaksiDesimaalia);
+      console.log(luku3, luku3KaksiDesimaalia);
+      summa = luku3 + luku3KaksiDesimaalia;
+      console.log("summa on " + summa);
+
+      // 04 Operaattorit
+      console.log("--04 Operaattorit--");
+
+      let luku4 = 5;
+      luku4++;
+      console.log(luku4);
+      luku4++;
+      console.log(luku4);
+      luku4--;
+      console.log(luku4);
+      luku4--;
+      console.log(luku4);
+    </script>
+  </body>
+</html>

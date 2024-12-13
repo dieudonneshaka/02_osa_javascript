@@ -164,6 +164,112 @@
       console.log(luku4);
       luku4--;
       console.log(luku4);
+
+      // 05 operaattori
+      function sum1(a, b){
+        return a + b;
+      }
+      const sum2 = (a, b) => a + b;
+
+      console.log(sum1(1, 3));
+      console.log(sum1(2, 5));
+      console.log(sum2(4, 3));
+      console.log(sum2(7, 5));
+
+      // 06 operaattori
+      function multiply1(a, b){
+        return a * b
+      }
+      const multiply2 = (a, b) => a * b;
+
+      console.log(multiply1(2, 4));
+      console.log(multiply2(3, 2));
+
+
+      function laskeNelionpintaala(sivunPituus) {
+        return sivunPituus * sivunPituus
+      }
+
+     console.log("sivunPituus: "  + laskeNelionpintaala(3));
+     console.log("sivunPituus: " + laskeNelionpintaala(5));
+     console.log("sivunPituus :" + laskeNelionpintaala(7));
+
+
+     function laskeKolmionPintaala(kannanPituus, korkeus){
+      return kannanPituus * korkeus
+     }
+     console.log("kannanpituus on 15 ja korkeus on 25:" + laskeKolmionPintaala(15,25));
+     console.log("kannanPituus on 5 ja  korkeus on 10: " + laskeKolmionPintaala(5,10));
+     console.log("kannanpituus on 10 ja korkeus on 20: " + laskeKolmionPintaala(10, 20));
+
+    //  Merkijonnot
+
+
+     function dieuDonne(muoka){
+      return muoka;
+     }
+     console.log(dieuDonne(10));
+     console.log(dieuDonne(15));
+
+     function huudaMinunNimi(nimi){
+      return nimi;
+     }
+     console.log(huudaMinunNimi('Dieudonne'));
+     console.log(huudaMinunNimi('JUHA'));
+
+     function lowName(name){
+      return name;
+     }
+     console.log(lowName('lowname'));
+
+     function firstLette (name){
+      return name;
+     }
+     console.log(firstLette('f'))
+
+     function lastLetter (name){
+      return name;
+     }
+     console.log(lastLetter('r'));
+
+     function skipFirstLetter(dieu){
+      return dieu;
+     }
+    console.log(skipFirstLetter('ied')); // dieu
+
+    function getLastCharacter(name){
+      return name;
+    }
+    console.log(getLastCharacter('e')); //Donne
+
+    
+function concatInitials(firstNameInitial, lastNameInitial) {
+  return firstNameInitial, lastNameInitial;
+
+}
+
+// Esimerkki - älä muokkaa
+console.log(concatInitials('J D'));
+console.log(concatInitials('d Jj'));
+
+function sayHello(name){
+  return name;
+}
+console.log(sayHello('hello alex'));
+
+function getFullName(firstName, lastName){
+  return firstName, lastName;
+}
+console.log(getFullName('Dieudonne Ngororano'));
+
+function capitalized(word){
+  return word;
+}
+console.log(capitalized('Dieu')); // dieu
+console.log(capitalized('dieu')); // Dieu
+console.log(capitalized('Dieu')); // dieu
+
+    
     </script>
   </body>
 </html>
